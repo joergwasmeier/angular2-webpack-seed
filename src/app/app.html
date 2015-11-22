@@ -1,0 +1,25 @@
+<header>
+    <h1 class="title">Hello {{ title }}</h1>
+</header>
+
+<main>
+    Your Content Here
+    <div>
+
+        <input type="text" [value]="title" (input)="changeTitle($event)" autofocus>
+        <!--
+          Rather than wiring up two-way data-binding ourselves
+          we can use Angular's [(ng-model)] syntax
+          <input type="text" [(ng-model)]="title">
+        -->
+    </div>
+
+    <pre>this.title = {{ title }}</pre>
+
+    <testcomp/>
+
+</main>
+
+<footer>
+
+</footer>
